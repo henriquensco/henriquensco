@@ -1,8 +1,11 @@
 <h1 align="center">Falaa pessoal! <img src="https://raw.githubusercontent.com/kaueMarques/kaueMarques/master/hi.gif" width="30px"></h1>
 
+<p>
 Me chamo Henrique, sou programador Full Stack, atuando com Php e VueJs. Curso Desenvolvimento de Sistemas pelo Senai.  
 Compartilho com vocês meus repositórios com uns projetinhos massas e ainda inacabados, mas dá pra tirar bastante proveito em :)!
 Curto muito fazer network na área de TI. Sempre acreditei que podemos ser melhores compartilhando as nossas experiências e aprendizados que vamos acumulando ao longo do tempo.
+</p>
+
 ---
 
 ### 🔧 Linguagens e Tecnologias
@@ -11,9 +14,10 @@ Curto muito fazer network na área de TI. Sempre acreditei que podemos ser melho
 ![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white) &nbsp;
 ![JavaScript](https://img.shields.io/badge/JavaScript-323330?style=for-the-badge&logo=javascript&logoColor=F7DF1E) &nbsp;
 ![PHP](https://img.shields.io/badge/PHP-777BB4?style=for-the-badge&logo=php&logoColor=white) &nbsp;
+![Python](https://img.shields.io/badge/Python-316192?style=for-the-badge&logo=python&logoColor=yellow) &nbsp;
+![Java](https://img.shields.io/badge/Java-316192?style=for-the-badge&logo=java&logoColor=red) &nbsp;
 ![MySQL](https://img.shields.io/badge/MySQL-00000F?style=for-the-badge&logo=mysql&logoColor=white) &nbsp;
 ![PostgreSQL](https://img.shields.io/badge/PostgreSQL-316192?style=for-the-badge&logo=postgresql&logoColor=white) &nbsp;
-
 <br>
 
 ---
