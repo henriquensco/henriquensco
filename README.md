@@ -1,7 +1,7 @@
 <h1 align="center">Falaa pessoal! <img src="https://raw.githubusercontent.com/kaueMarques/kaueMarques/master/hi.gif" width="30px"></h1>
 
 <p>
-Me chamo Henrique, sou programador Full Stack, atuando com Php e VueJs. Curso Desenvolvimento de Sistemas pelo Senai.  
+Me chamo Henrique, sou Desenvolvedor Full Stack, atuando com Php e VueJs. Curso Desenvolvimento de Sistemas pelo Senai.  
 Compartilho com vocês meus repositórios com uns projetinhos massas e ainda inacabados, mas dá pra tirar bastante proveito em :)!
 Curto muito fazer network na área de TI. Sempre acreditei que podemos ser melhores compartilhando as nossas experiências e aprendizados que vamos acumulando ao longo do tempo.
 </p>
