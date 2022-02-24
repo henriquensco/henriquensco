@@ -1,52 +1,33 @@
 <template>
-  <div class="Home">
-    <HeaderComponent/>
-    <div id="home">
-      home
-    </div>
-    <div id="about" style="margin:700px">
-      about
-    </div>
-    <div id="experiences" style="margin:700px">
-      experiences
-    </div>
-    <div id="projects" style="margin:700px">
-      projects
-    </div>
-    <div id="contact" style="margin:700px">
-      contact
-    </div>
+  <div class="home">
+    <div id="svg"></div>
+    <h1>Henrique Nascimento Costa</h1>
+    <h3>Seja bem vindo!</h3>
+    <h4>Venha conhecer um pouco mais sobre mim.</h4>
   </div>
 </template>
 
 <script>
-import HeaderComponent from '../components/HeaderComponent';
+// @ is an alias to /src
 
 export default {
-  name: 'Home',
-  props: {
-    msg: String
-  },
-  components: {
-    HeaderComponent
-  }
-}
+  name: "Home",
+  components: {},
+};
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-h3 {
-  margin: 40px 0 0;
+.home {
+  display: grid;
+  justify-content: center;
 }
-ul {
-  list-style-type: none;
-  padding: 0;
+#svg {
+  background-image: url("~@/assets/e-3d-boy-sitting-with-laptop-and-cup.svg");
+  background-repeat: no-repeat;
+  background-size: 127% 90%;
+  padding: 160px;
 }
-li {
-  display: inline-block;
-  margin: 0 10px;
-}
-a {
-  color: #42b983;
+h1, h3, h4 {
+  text-shadow: rgba(255, 255, 255, 0.7) 0 0px 4px;
 }
 </style>

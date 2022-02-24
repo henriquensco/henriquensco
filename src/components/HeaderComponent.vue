@@ -2,11 +2,11 @@
   <header>
     <div id="content">
       <ul>
-        <li><a href="#">Home</a></li>
-        <li><a href="#about">Sobre</a></li>
-        <li><a href="#experiences">Experiências</a></li>
-        <li><a href="#projects">Projetos</a></li>
-        <li><a href="#contact">Contato</a></li>
+        <li><router-link to="/">Home</router-link></li>
+        <li><router-link to="/about">About</router-link></li>
+        <li><router-link to="/experiences">Experiências</router-link></li>
+        <li><router-link to="/projects">Projetos</router-link></li>
+        <li><router-link to="/contact">Contato</router-link></li>
       </ul>
     </div>
   </header>
