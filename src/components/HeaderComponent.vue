@@ -3,10 +3,10 @@
     <div id="content">
       <ul>
         <li><router-link to="/">Home</router-link></li>
-        <li><router-link to="/about">About</router-link></li>
+        <li><router-link to="/abilities">Habilidades</router-link></li>
         <li><router-link to="/experiences">Experiências</router-link></li>
         <li><router-link to="/projects">Projetos</router-link></li>
-        <li><router-link to="/contact">Contato</router-link></li>
+        <li><router-link to="/about">Sobre</router-link></li>
       </ul>
     </div>
   </header>
@@ -28,8 +28,8 @@ header {
   background: rgb(15 15 30 / 90%);
   border-radius: 16px;
   box-shadow: 0 4px 30px rgb(30 30 73 / 76%);
-  backdrop-filter: blur(8.8px);
-  -webkit-backdrop-filter: blur(8.8px);
+  /* backdrop-filter: blur(8.8px);
+  -webkit-backdrop-filter: blur(8.8px); */
   border: 1px solid rgb(17 17 35 / 54%);
   position: fixed;
   bottom: 1.5%;
@@ -38,10 +38,18 @@ header {
   height: 60px;
 }
 
-@media(max-width: 642px) {
-    header {
-        width: 97%;
-    }
+@media (max-width: 642px) {
+  header {
+    width: 97%;
+  }
+}
+
+@media (max-width: 440px) {
+  #content {
+    margin: 10px;
+    font-size: 11px;
+    right: 15px;
+  }
 }
 
 header:before {
@@ -81,6 +89,6 @@ box-shadow: 0 0 5px 0;
 }
 
 #content ul li a:hover {
-    color: #acacac;
+  color: #acacac;
 }
 </style>

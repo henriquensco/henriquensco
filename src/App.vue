@@ -4,24 +4,30 @@
       <component :is="Component" />
     </transition>
   </router-view>
-  <HeaderComponent/>
+  <HeaderComponent />
 </template>
 
 <script>
-import HeaderComponent from '@/components/HeaderComponent.vue';
+import HeaderComponent from "@/components/HeaderComponent.vue";
 
 export default {
   name: "App",
   components: {
-    HeaderComponent
-  }
-}
+    HeaderComponent,
+  },
+};
 </script>
 
 <style>
-*{
+* {
   overflow: hidden;
   scroll-behavior: smooth;
+}
+@media (max-width: 420px) {
+  * {
+    overflow:visible;
+    scroll-behavior: smooth;
+  }
 }
 body {
   background-color: #0f0f1e;
@@ -40,6 +46,6 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color:#e4e4e4;
+  color: #e4e4e4;
 }
 </style>
