@@ -1,7 +1,7 @@
 <template>
   <div class="pagination">
     <div id="projects">
-      <div v-for="value in logs" :key="value.key">
+      <div v-for="value in dataPerPage" :key="value.key">
         <a :href="value.html_url" target="_blank">
           <div id="block">
             <span id="title">{{ value.name }}</span
@@ -11,55 +11,70 @@
         </a>
       </div>
     </div>
-    <div style="display:none">{{logs}}</div>
     <div id="buttons">
       <button @click="prevPage()">Prev</button>
-      <button>01</button>
+      <button v-for="value in totalPages" :key="value.key" :id="'btn-' + value" @click="setPage(value)">
+        {{ value }}
+      </button>
       <button @click="nextPage()">Next</button>
     </div>
   </div>
 </template>
 
 <script>
+//import { nextTick } from "@vue/runtime-core";
 export default {
   name: "Pagination",
   data() {
-      return {
-          currentPage: 1,
-      }
+    return {
+      currentPage: 1,
+    };
   },
   props: {
     data: Object,
   },
   computed: {
-    dataax() {
-      let pages = Math.round(this.data.length/8);
+    pages() {
+      let pages = Math.ceil(this.data.length / 6);
       return pages;
     },
-    logs() {
+    dataPerPage() {
       let page = this.data;
-      page = page.slice(0, this.currentPage + 1);
-      console.log(page);
+      let index = this.currentPage * this.pages;
+      page = page.slice(index, index + this.pages);
+      /* nextTick(() => {
+        if(this.currentPage == document.querySelector('#btn-'+this.currentPage).textContent) {
+          document.querySelector('#btn-'+this.currentPage).style = 'background-color:red;';
+        } else {
+          document.querySelector('#btn-'+(this.currentPage-1)).style = 'background-color:blue;';
+        }
+      }); */
       return page;
-    }
-  },
-  mounted() {
-      //console.log(this.data);
+    },
+    totalPages() {
+      let qu = [];
 
+      for (let num = 1; num < Math.ceil(this.data.length / this.pages); num++) {
+        qu.push(num);
+      }
+      return qu;
+    },
   },
   methods: {
-      numPages() {
-        console.log(this.data);
-      },
-      prevPage() {
-        if(this.currentPage > 0) {
-          this.currentPage--;
-        }
-      },
-      nextPage() {
+    prevPage() {
+      if (this.currentPage > 1) {
+        this.currentPage--;
+      }
+    },
+    nextPage() {
+      if (this.currentPage < this.totalPages.length) {
         this.currentPage++;
       }
-  }
+    },
+    setPage(page) {
+      this.currentPage = page;
+    },
+  },
 };
 </script>
 
@@ -70,7 +85,7 @@ export default {
 }
 #projects {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
   flex-wrap: wrap;
   margin: 0 auto;
 }
@@ -83,13 +98,14 @@ export default {
   margin: 4px 5px;
   color: #0f0f1e;
   padding: 15px 15px;
+  width: 250px;
 }
 #block #title {
   font-weight: bold;
 }
 @media (max-width: 420px) {
   #projects {
-    display: grid;
+    display: flex;
     width: 100%;
     justify-content: center;
     margin-bottom: 106px;
@@ -124,5 +140,8 @@ export default {
 }
 #buttons button:hover {
   background-color: #bebebe;
+}
+.ativo {
+  background-color: #ad731c;
 }
 </style>
