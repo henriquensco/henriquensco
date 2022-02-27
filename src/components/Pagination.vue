@@ -13,7 +13,7 @@
     </div>
     <div id="buttons">
       <button @click="prevPage()">Prev</button>
-      <button v-for="value in totalPages" :key="value.key" :id="'btn-' + value" @click="setPage(value)">
+      <button v-for="value in totalPages" :key="value.key" :id="'btn-' + value" @click="setPage(value)" :class="{ativo: currentPage == value}">
         {{ value }}
       </button>
       <button @click="nextPage()">Next</button>
@@ -42,13 +42,6 @@ export default {
       let page = this.data;
       let index = this.currentPage * this.pages;
       page = page.slice(index, index + this.pages);
-      /* nextTick(() => {
-        if(this.currentPage == document.querySelector('#btn-'+this.currentPage).textContent) {
-          document.querySelector('#btn-'+this.currentPage).style = 'background-color:red;';
-        } else {
-          document.querySelector('#btn-'+(this.currentPage-1)).style = 'background-color:blue;';
-        }
-      }); */
       return page;
     },
     totalPages() {
@@ -120,9 +113,9 @@ export default {
   margin: 10px 5px;
   cursor: pointer;
   border-radius: 25px;
-  background-color: #dfdfdf;
   font-weight: bold;
   border: 1px solid #252636;
+  display: inline-block;
 }
 
 #buttons button:first-child,
@@ -142,6 +135,6 @@ export default {
   background-color: #bebebe;
 }
 .ativo {
-  background-color: #ad731c;
+  background-color: #777887;
 }
 </style>
