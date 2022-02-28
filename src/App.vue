@@ -31,6 +31,7 @@ export default {
 }
 body {
   background-color: #0f0f1e;
+  width: 100%;
 }
 
 .fade-enter-active,

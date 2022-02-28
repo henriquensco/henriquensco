@@ -21,13 +21,24 @@ export default {
   display: grid;
   justify-content: center;
 }
+@media (max-width: 420px) {
+  .home {
+    display: grid;
+    justify-content: center;
+  }
+  #svg {
+  padding: 100px;
+}
+}
 #svg {
   background-image: url("~@/assets/e-3d-boy-sitting-with-laptop-and-cup.svg");
   background-repeat: no-repeat;
   background-size: 127% 90%;
   padding: 160px;
 }
-h1, h3, h4 {
+h1,
+h3,
+h4 {
   text-shadow: rgba(255, 255, 255, 0.7) 0 0px 4px;
 }
 </style>

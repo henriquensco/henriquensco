@@ -44,11 +44,14 @@ header {
   }
 }
 
-@media (max-width: 440px) {
+@media (max-width: 420px) {
   #content {
     margin: 10px;
     font-size: 11px;
     right: 15px;
+  }
+  header {
+    padding: 0;
   }
 }
 
