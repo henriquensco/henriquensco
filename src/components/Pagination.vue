@@ -1,19 +1,43 @@
 <template>
   <div class="pagination">
-    <div id="projects">
-      <div v-for="value in dataPerPage" :key="value.key">
-        <a :href="value.html_url" target="_blank">
-          <div id="block">
-            <span id="title">{{ value.name }}</span
-            ><br />
-            <span id="language">{{ value.language }}</span>
+    <div id="page">
+      <div v-for="value in dataPerPage" :key="value.key" id="card">
+        <div id="card-left">
+          <div><span>PROJETO</span></div>
+          <div>
+            <span>{{ value.name }}</span>
           </div>
-        </a>
+          <div>
+            <a :href="value.html_url" target="_blank">Ver repositório</a>
+          </div>
+        </div>
+        <div id="card-right">
+          <div id="language"><span>Linguagem: HTML</span></div>
+          <div id="description">
+            <span v-if="value.description">{{ value.description }}</span>
+            <span v-else>Não há descrição nesse projeto! :(</span>
+          </div>
+          <div id="dates">
+            <div>
+              <span>Criado em: {{ value.created_at.slice(0, 10) }}</span>
+            </div>
+            <div>
+              <span>Atualizado em: {{ value.updated_at.slice(0, 10) }}</span>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
+
     <div id="buttons">
       <button @click="prevPage()">Prev</button>
-      <button v-for="value in totalPages" :key="value.key" :id="'btn-' + value" @click="setPage(value)" :class="{ativo: currentPage == value}">
+      <button
+        v-for="value in totalPages"
+        :key="value.key"
+        :id="'btn-' + value"
+        @click="setPage(value)"
+        :class="{ ativo: currentPage == value }"
+      >
         {{ value }}
       </button>
       <button @click="nextPage()">Next</button>
@@ -76,36 +100,100 @@ export default {
   display: grid;
   justify-content: center;
 }
-#projects {
+
+#page {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  flex-wrap: wrap;
+  width: 700px;
   margin: 0 auto;
 }
-#projects a {
-  text-decoration: none;
+
+#card {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  border-radius: 10px;
+  margin: 5px 5px;
+  /* box-shadow: rgb(248 248 248 / 37%) 0px 0px 5px 1px; */
 }
-#block {
+#card:hover {
+  box-shadow: rgb(53 53 87 / 95%) 0px 0px 7px 1px;
+  cursor: pointer;
+}
+@media (max-width: 520px) {
+  #page {
+    display: flex;
+    flex-wrap: wrap;
+    width: 400px;
+    margin: 0 auto;
+  }
+  #card #card-left {
+  width: 15ch;
+}
+  .pagination {
+    margin-bottom: 15%;
+  }
+}
+#card #card-left {
+  background-color: #361d70;
+  float: left;
+  padding: 8px 10px;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  width: 24ch;
+}
+#card #card-right {
   background-color: #ffffff;
-  border-radius: 4px;
-  margin: 4px 5px;
-  color: #0f0f1e;
-  padding: 15px 15px;
-  width: 250px;
+  float: right;
+  padding: 8px 10px;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
 }
-#block #title {
+
+#card #card-left div {
+  margin: 5px 0;
+  text-align: left;
+}
+#card #card-left div:nth-child(3) {
+  margin-top: 20px;
+}
+#card #card-left div:nth-child(1) {
+  color: #bebebe;
+  font-size: 11px;
+}
+#card #card-left div:nth-child(2) {
+  color: #e7e7e7;
+  font-size: 16px;
   font-weight: bold;
 }
-@media (max-width: 420px) {
-  #projects {
-    display: flex;
-    width: 100%;
-    justify-content: center;
-    margin-bottom: 106px;
-  }
-  #block {
-    padding: 5px 5px;
-  }
+#card #card-left div:nth-child(3) a {
+  color: #969696;
+  font-size: 11px;
+  text-decoration: none;
+}
+
+#card #card-right #dates {
+  display: flex;
+  font-size: 12px;
+  color: #bebebe;
+  font-weight: bold;
+  position: sticky;
+  top: 73%;
+}
+#card #card-right #description {
+  text-align: left;
+  padding: 5px 15px;
+  color: #7e7e7e;
+}
+#card #card-right #language {
+  text-align: left;
+  padding: 5px 15px;
+  color: #7e7e7e;
+  font-size: 12px;
+}
+#card #card-right #dates div:first-child {
+  border-right: 1px solid #a7a7a7;
+}
+#card #card-right #dates div {
+  padding: 2px 15px 1px 15px;
 }
 
 #buttons button {
@@ -136,5 +224,9 @@ export default {
 }
 .ativo {
   background-color: #777887;
+  color: #ffffff;
+}
+#date_crup {
+  font-weight: bold;
 }
 </style>
