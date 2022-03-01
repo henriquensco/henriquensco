@@ -28,6 +28,9 @@ export default {
     overflow:visible;
     scroll-behavior: smooth;
   }
+  #about-me {
+    margin-bottom: 15%;
+  }
 }
 body {
   background-color: #0f0f1e;

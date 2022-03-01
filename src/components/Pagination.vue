@@ -118,20 +118,6 @@ export default {
   box-shadow: rgb(53 53 87 / 95%) 0px 0px 7px 1px;
   cursor: pointer;
 }
-@media (max-width: 520px) {
-  #page {
-    display: flex;
-    flex-wrap: wrap;
-    width: 400px;
-    margin: 0 auto;
-  }
-  #card #card-left {
-  width: 15ch;
-}
-  .pagination {
-    margin-bottom: 15%;
-  }
-}
 #card #card-left {
   background-color: #361d70;
   float: left;
@@ -147,7 +133,6 @@ export default {
   border-top-right-radius: 10px;
   border-bottom-right-radius: 10px;
 }
-
 #card #card-left div {
   margin: 5px 0;
   text-align: left;
@@ -177,6 +162,7 @@ export default {
   font-weight: bold;
   position: sticky;
   top: 73%;
+  overflow: hidden;
 }
 #card #card-right #description {
   text-align: left;
@@ -228,5 +214,20 @@ export default {
 }
 #date_crup {
   font-weight: bold;
+}
+
+@media (max-width: 420px) {
+  #page {
+    display: flex;
+    flex-wrap: wrap;
+    width: 350px;
+    margin: 0 auto;
+  }
+  #card #card-left {
+    width: 15ch;
+  }
+  .pagination {
+    margin-bottom: 15%;
+  }
 }
 </style>

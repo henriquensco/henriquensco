@@ -3,15 +3,6 @@
     <h1>Projetos</h1>
 
     <div id="projects">
-      <!-- <div v-for="value in data" :key="value.key">
-        <a :href="value.html_url" target="_blank">
-          <div id="block">
-            <span id="title">{{ value.name }}</span
-            ><br />
-            <span id="language">{{ value.language }}</span>
-          </div>
-        </a>
-      </div> -->
       <Pagination :data="data" />
     </div>
   </div>
