@@ -101,17 +101,10 @@ export default {
   justify-content: center;
 }
 
-#page {
-  display: grid;
-  width: 700px;
-  margin: 0 auto;
-}
-
 #card {
-  display: grid;
-  grid-template-columns: 1fr 2fr;
+  display: flex;
   border-radius: 10px;
-  margin: 5px 5px;
+  margin: 5px 50px 10px;
   /* box-shadow: rgb(248 248 248 / 37%) 0px 0px 5px 1px; */
 }
 #card:hover {
@@ -124,7 +117,7 @@ export default {
   padding: 8px 10px;
   border-top-left-radius: 10px;
   border-bottom-left-radius: 10px;
-  width: 24ch;
+  width: 30%;
 }
 #card #card-right {
   background-color: #ffffff;
@@ -132,6 +125,7 @@ export default {
   padding: 8px 10px;
   border-top-right-radius: 10px;
   border-bottom-right-radius: 10px;
+  width: 65%;
 }
 #card #card-left div {
   margin: 5px 0;
