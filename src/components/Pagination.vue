@@ -103,8 +103,9 @@ export default {
 
 #card {
   display: flex;
+  width: 100vh;
   border-radius: 10px;
-  margin: 5px 50px 10px;
+  margin: 5px 10px 10px auto;
   /* box-shadow: rgb(248 248 248 / 37%) 0px 0px 5px 1px; */
 }
 #card:hover {
@@ -125,7 +126,7 @@ export default {
   padding: 8px 10px;
   border-top-right-radius: 10px;
   border-bottom-right-radius: 10px;
-  width: 65%;
+  width: 100%;
 }
 #card #card-left div {
   margin: 5px 0;
