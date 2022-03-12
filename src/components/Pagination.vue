@@ -12,7 +12,7 @@
           </div>
         </div>
         <div id="card-right">
-          <div id="language"><span>Linguagem: HTML</span></div>
+          <div id="language"><span>Linguagem: {{ value.language }}</span></div>
           <div id="description">
             <span v-if="value.description">{{ value.description }}</span>
             <span v-else>Não há descrição nesse projeto! :(</span>
