@@ -4,6 +4,7 @@
   <Habilidades/>
   <Experiencias/>
   <Projetos/>
+  <Sobre/>
 </template>
 
 <script>
@@ -12,6 +13,7 @@ import Home from "@/views/Home.vue";
 import Habilidades from "@/views/Habilidades.vue";
 import Experiencias from "@/views/Experiencias.vue";
 import Projetos from "@/views/Projetos.vue";
+import Sobre from "@/views/Sobre.vue";
 
 export default {
   name: "App",
@@ -20,7 +22,8 @@ export default {
     Home,
     Habilidades,
     Experiencias,
-    Projetos
+    Projetos,
+    Sobre
   },
 };
 </script>
@@ -33,6 +36,28 @@ export default {
     padding: 0;
     scroll-behavior: smooth;
 }
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #414141;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 4px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;

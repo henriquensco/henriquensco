@@ -1,40 +1,37 @@
 <template>
   <section class="home">
-    
     <div id="helloiam">
       <div class="cta-texto">
         <h1>
-          Hey, there! <br>
+          Hey, there! <br />
           <span>I'm Henrique</span>
         </h1>
         <span>Desenvolvedor Full Stack</span>
       </div>
 
       <div>
-        <img src="../assets/e-3d-boy-sitting-with-laptop-and-cup.svg" alt="">
+        <img src="../assets/e-3d-boy-sitting-with-laptop-and-cup.svg" alt="" />
       </div>
     </div>
-    
   </section>
 </template>
 
 <script>
-
 export default {
   name: "Home",
   data() {
     return {
-      data: {}
-    }
+      data: {},
+    };
   },
   components: {},
 };
 </script>
 
 <style scoped>
-.home{
+.home {
   background: #171717;
-  color:#fff;
+  color: #fff;
   margin: 68px 0 0;
   height: 34rem;
 }
@@ -61,5 +58,17 @@ export default {
 
 #helloiam img {
   max-width: 60%;
+}
+
+@media (max-width: 600px) {
+  #helloiam {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  #helloiam div {
+    margin: 15px 0;
+  }
 }
 </style>
