@@ -1,7 +1,7 @@
 <template>
     <section class="experiencias" >
         <div id="experiences">
-            <h1>Experiencias</h1>
+            <h1>Experiências</h1>
 
             <div id="experience">
                 <div id="image"><img src="@/assets/dpc.png" alt=""></div>
@@ -56,7 +56,7 @@ export default {
     text-align: revert;
 }
 
-@media(max-width:430px) {
+@media(max-width:630px) {
     #experience {
         display: block;
     }

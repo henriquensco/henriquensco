@@ -25,6 +25,9 @@ export default {
     Projetos,
     Sobre
   },
+  created() {
+    document.title = "Henrique Nascimento Costa"
+  }
 };
 </script>
 

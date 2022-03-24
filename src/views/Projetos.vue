@@ -67,6 +67,7 @@ export default {
 <style scoped>
 .projetos {
   background: #171717;
+  height: 35rem;
 }
 
 #projects {

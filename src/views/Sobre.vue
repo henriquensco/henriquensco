@@ -22,11 +22,11 @@ export default {
 }
 
 #about {
-    padding: 60px 0;
+    padding: 40px 0;
 }
 
 #about h1 {
     font-size: 2.4rem;
-    padding: 60px;
+    padding: 20px;
 }
 </style>
