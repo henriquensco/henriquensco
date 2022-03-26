@@ -25,7 +25,7 @@
       </div>
     </div>
 
-    <div id="allrepositories"><a href="#" target="_blank">Todos os Repositórios</a></div>
+    <div id="allrepositories"><a href="https://github.com/henriquensco?tab=repositories" target="_blank">Todos os Repositórios</a></div>
   </section>
 </template>
 

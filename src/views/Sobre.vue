@@ -33,9 +33,30 @@
       </div>
 
       <div id="findme">
-          <ul>
-              <li><a href="http://" target="_blank" rel="noopener noreferrer"></a></li>
-          </ul>
+        <h3>Saiba onde me encontrar</h3>
+        <ul id="networks">
+          <li>
+            <a
+              href="https://www.linkedin.com/in/henriquensco/"
+              target="_blank"
+              rel="Linkedin"
+            ></a>
+          </li>
+          <li>
+            <a
+              href="https://github.com/henriquensco"
+              target="_blank"
+              rel="GitHub"
+            ></a>
+          </li>
+          <li>
+            <a
+              href="mailto:henriquensco@gmail.com"
+              target="_blank"
+              rel="Email"
+            ></a>
+          </li>
+        </ul>
       </div>
     </div>
   </section>
@@ -69,14 +90,44 @@ export default {
 }
 
 #about #description {
-    background-color: rgba(255, 255, 255, 0.741);
-    color: #171717;
-    font-size: 1rem;
-    padding: 10px 10px;
-    border-radius: 4px;
-    margin: 40px 0 0 0;
+  background-color: rgba(255, 255, 255, 0.741);
+  color: #171717;
+  font-size: 1rem;
+  padding: 10px 10px;
+  border-radius: 4px;
+  margin: 40px 0 0 0;
 }
 #about #description p {
-    padding: 5px 0;
+  padding: 5px 0;
+}
+
+#findme {
+    margin-top:10%;
+}
+
+#about #networks li {
+  display: inline-block;
+    padding: 15px 5px;
+}
+#about #networks li:first-child a {
+  background-image: url("~@/assets/linkedin.svg");
+  background-repeat: no-repeat;
+  background-size: 40px 81px;
+  cursor: pointer;
+  padding: 22px 25px;
+}
+#about #networks li:nth-child(2) a {
+  background-image: url("~@/assets/github.svg");
+  background-repeat: no-repeat;
+  background-size: 40px 81px;
+  cursor: pointer;
+  padding: 22px 25px;
+}
+#about #networks li:nth-child(3) a {
+  background-image: url("~@/assets/email-address.svg");
+  background-repeat: no-repeat;
+  background-size: 40px 81px;
+  cursor: pointer;
+  padding: 22px 25px;
 }
 </style>
