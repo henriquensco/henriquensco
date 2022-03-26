@@ -1,13 +1,23 @@
 <template>
   <header>
     <div id="content">
-      <ul>
-        <li><router-link to="/">Home</router-link></li>
-        <li><router-link to="/abilities">Habilidades</router-link></li>
-        <li><router-link to="/experiences">Experiências</router-link></li>
-        <li><router-link to="/projects">Projetos</router-link></li>
-        <li><router-link to="/about">Sobre</router-link></li>
-      </ul>
+      <div id="logo">
+        <h4>Henrique's</h4>
+      </div>
+      <div class="topnav" id="menu">
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#abilities">Habilidades</a></li>
+          <li><a href="#experiences">Experiências</a></li>
+          <li><a href="#projects">Projetos</a></li>
+          <li><a href="#about">Sobre</a></li>
+        </ul>
+      </div>
+      <li class="icon">
+        <a @click="activeMenu"
+          ><img src="@/assets/hamburguer-menu.svg" alt=""
+        /></a>
+      </li>
     </div>
   </header>
 </template>
@@ -17,81 +27,127 @@ export default {
   name: "HeaderComponent",
   props: {},
   data() {
-    return {};
+    return {
+      responsiveMenu: false,
+    };
+  },
+  methods: {
+    activeMenu() {
+      this.responsiveMenu = true;
+      let menu = document.querySelector("#menu");
+      if (menu.className === "topnav") {
+        menu.className += " responsive";
+        //menu.classList.toggle('');
+      } else {
+        menu.className = "topnav";
+      }
+
+      console.log(menu);
+    },
   },
 };
 </script>
 
 <style scoped>
-header {
-  /* From https://css.glass */
-  background: rgb(15 15 30 / 90%);
-  border-radius: 16px;
-  box-shadow: 0 4px 30px rgb(30 30 73 / 76%);
-  /* backdrop-filter: blur(8.8px);
-  -webkit-backdrop-filter: blur(8.8px); */
-  border: 1px solid rgb(17 17 35 / 54%);
-  position: fixed;
-  bottom: 1.5%;
-  width: 98.5%;
-  padding: 0 0 5px;
-  height: 60px;
-}
-
-@media (max-width: 642px) {
-  header {
-    width: 97%;
-  }
-}
-
-@media (max-width: 420px) {
-  #content {
-    margin: 10px;
-    font-size: 11px;
-    right: 15px;
-  }
-  header {
-    padding: 0;
-  }
-}
-
-header:before {
-  content: "";
-  background: inherit;
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 0;
-  bottom: 0;
-  box-shadow: inset 0 0 0 3000px rgb(20 20 40 / 80%);
-  filter: blur(10px);
-}
-
 /* header {
-box-shadow: 0 0 5px 0;
-            background: inherit;
-            backdrop-filter: blur(10px);
-            margin: 100px;
-            text-align: center;
+  background-color: #21314e;
+  border-bottom: 1px solid #15243e;
+  padding: 25px;
 } */
 
 #content {
-  position: relative;
-  z-index: 1;
+  display: flex;
+  justify-content: space-around;
+  background-color: #21314e;
+  border-bottom: 1px solid #15243e;
+  padding: 25px;
+  position: fixed;
+  top: 0;
+  width: 100%;
 }
 
-#content ul li {
-  display: inline-block;
+#menu ul {
+  display: flex;
+  list-style: none;
+  justify-content: center;
+}
+
+#menu ul li a {
   padding: 5px 5px;
-}
-
-#content ul li a {
-  color: #e4e4e4;
-  text-decoration: none;
+  color: #d6d6d6;
   font-weight: bold;
+  text-decoration: none;
 }
 
-#content ul li a:hover {
-  color: #acacac;
+.icon {
+  display: none;
+}
+
+@media (max-width: 600px) {
+  .topnav {
+    display: none;
+  }
+  .icon {
+    display: block;
+    cursor: pointer;
+    margin-top: -5px;
+  }
+
+  .topnav.responsive {
+    position: absolute;
+    display: block;
+    top: 101.5%;
+    background: rgb(33 49 78 / 99%);
+    width: 50%;
+    right: 0;
+    height: 100rem;
+  }
+
+  @keyframes openMenu {
+    from {
+      right: -100%;
+    }
+    to {
+      right: 0;
+    }
+  }
+
+
+  @keyframes closeMenu {
+    from {
+      right: 0;
+    }
+    to {
+      right: -100%;
+    }
+  }
+
+  #menu {
+    text-align: justify;
+  }
+
+  #menu ul {
+    display: block;
+  }
+
+  #menu ul li:hover {
+    background: rgb(33 49 78 / 96%);
+  }
+
+  #menu ul li a {
+    color: #ededed;
+    padding: 15px 15px;
+  }
+
+  .topnav.responsive .icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .topnav.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
 }
 </style>
