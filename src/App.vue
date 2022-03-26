@@ -5,10 +5,12 @@
   <Experiencias/>
   <Projetos/>
   <Sobre/>
+  <FooterComponent />
 </template>
 
 <script>
 import HeaderComponent from "@/components/HeaderComponent.vue";
+import FooterComponent from "@/components/FooterComponent.vue";
 import Home from "@/views/Home.vue";
 import Habilidades from "@/views/Habilidades.vue";
 import Experiencias from "@/views/Experiencias.vue";
@@ -19,6 +21,7 @@ export default {
   name: "App",
   components: {
     HeaderComponent,
+    FooterComponent,
     Home,
     Habilidades,
     Experiencias,

@@ -23,8 +23,9 @@
           </div>
         </div>
       </div>
-      <!-- {{data[0]}} -->
     </div>
+
+    <div id="allrepositories"><a href="#" target="_blank">Todos os Repositórios</a></div>
   </section>
 </template>
 
@@ -67,11 +68,11 @@ export default {
 <style scoped>
 .projetos {
   background: #171717;
-  height: 35rem;
+  height: 100%;
 }
 
 #projects {
-  padding: 40px 0;
+  padding: 30px 0 105px;
 }
 
 #projects h1 {
@@ -82,7 +83,7 @@ export default {
 #list-projects {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(20%, 1fr));
-  margin: 80px 170px 0 170px;
+  margin: 25px 170px 0 170px;
   gap: 20px;
   justify-content: space-around;
   align-content: flex-end;
@@ -143,5 +144,17 @@ export default {
 
 #list-projects #project #projectbody div {
   margin: 10px 0;
+}
+
+#allrepositories a{
+    background-color: #fcfcfc;
+    padding: 15px 15px;
+    width: 26%;
+    margin: 0 auto;
+    margin-top: 15px;
+    text-decoration: none;
+    color: #171717;
+    font-weight: bold;
+    border-radius: 4px;
 }
 </style>
