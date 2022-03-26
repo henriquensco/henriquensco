@@ -96,7 +96,7 @@ export default {
   .topnav.responsive {
     position: absolute;
     display: block;
-    top: 102%;
+    top: 101.5%;
     background: rgb(33 49 78 / 99%);
     width: 50%;
     right: 0;
