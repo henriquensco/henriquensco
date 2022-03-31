@@ -44,7 +44,7 @@ Curto muito fazer network na área de TI. Sempre acreditei que podemos ser melho
   <img align="center" src="https://img.shields.io/badge/Instagram-E4405F?style=for-the-badge&logo=instagram&logoColor=white" alt="Instagram"/>
 </a>
 
-<a href="https://www.linkedin.com/in/henrique-nascimento-costa-2a1332157/" target="_blank">
+<a href="https://www.linkedin.com/in/henriquensco/" target="_blank">
   <img align="center" src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn"/>
 </a>
 </p>
