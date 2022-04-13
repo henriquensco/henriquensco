@@ -4,9 +4,9 @@
       <div class="cta-texto">
         <h1>
           Hey, there! <br />
-          <span>I'm Henrique</span>
+          <span>I'm Henrique</span><span id="slash">|</span>
         </h1>
-        <span>Desenvolvedor Full Stack</span>
+        <span id="dev-title">Desenvolvedor Full Stack</span>
       </div>
 
       <div>
@@ -40,6 +40,7 @@ export default {
   display: flex;
   flex-direction: column;
   align-items: center;
+  text-align: left;
 }
 
 .cta-texto h1 {
@@ -70,5 +71,29 @@ export default {
   #helloiam div {
     margin: 15px 0;
   }
+}
+
+@keyframes slash {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+#slash {
+  color: #621381;
+  animation: slash 0.5s alternate infinite;
+}
+
+#dev-title {
+    color: #621381;
+    display: block;
+    margin-left: -1.5rem;
+    font-weight: bold;
 }
 </style>
