@@ -27,7 +27,7 @@ export default {
 <style scoped>
 .experiencias {
     background: #171717;
-    height: 600px;
+    max-height: 100%;
 }
 
 #experiences {

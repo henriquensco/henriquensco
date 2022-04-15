@@ -10,7 +10,7 @@
           <li><a href="#abilities">Habilidades</a></li>
           <li><a href="#experiences">Experiências</a></li>
           <li><a href="#projects">Projetos</a></li>
-          <li><a href="#about">Sobre</a></li>
+          <!-- <li><a href="#about">Sobre</a></li> -->
         </ul>
       </div>
       <li class="icon">

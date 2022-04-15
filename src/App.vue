@@ -4,7 +4,7 @@
   <Habilidades/>
   <Experiencias/>
   <Projetos/>
-  <Sobre/>
+  <!-- <Sobre/> -->
   <FooterComponent />
 </template>
 
@@ -15,7 +15,7 @@ import Home from "@/views/Home.vue";
 import Habilidades from "@/views/Habilidades.vue";
 import Experiencias from "@/views/Experiencias.vue";
 import Projetos from "@/views/Projetos.vue";
-import Sobre from "@/views/Sobre.vue";
+//import Sobre from "@/views/Sobre.vue";
 
 export default {
   name: "App",
@@ -26,7 +26,7 @@ export default {
     Habilidades,
     Experiencias,
     Projetos,
-    Sobre
+    //Sobre
   },
   created() {
     document.title = "Henrique Nascimento Costa"

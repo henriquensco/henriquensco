@@ -68,7 +68,7 @@ export default {
 <style scoped>
 .projetos {
   background: #171717;
-  height: 100%;
+  height: 500px;
 }
 
 #projects {
@@ -77,7 +77,7 @@ export default {
 
 #projects h1 {
   font-size: 2.4rem;
-  padding: 70px;
+  padding: 20px;
 }
 
 #list-projects {

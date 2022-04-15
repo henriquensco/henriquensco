@@ -4,7 +4,7 @@
       <div class="cta-texto">
         <h1>
           Hey, there! <br />
-          <span>I'm Henrique</span><span id="slash">|</span>
+          <span>I'm Henrique</span>
         </h1>
         <span id="dev-title">Desenvolvedor Full Stack</span>
       </div>
@@ -73,27 +73,4 @@ export default {
   }
 }
 
-@keyframes slash {
-  0% {
-    opacity: 1;
-  }
-  50% {
-    opacity: 0.5;
-  }
-  100% {
-    opacity: 0;
-  }
-}
-
-#slash {
-  color: #621381;
-  animation: slash 0.5s alternate infinite;
-}
-
-#dev-title {
-    color: #621381;
-    display: block;
-    margin-left: -1.5rem;
-    font-weight: bold;
-}
 </style>
