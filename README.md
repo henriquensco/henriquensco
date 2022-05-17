@@ -3,7 +3,7 @@
 <p>
 Me chamo Henrique, sou Desenvolvedor Full Stack, atuando com PHP e VueJs. Curso Desenvolvimento de Sistemas pelo Senai.  
 Compartilho com vocês meus repositórios com uns projetinhos massas e ainda inacabados, mas dá pra tirar bastante proveito em :)!
-Curto muito fazer network na área de TI. Sempre acreditei que podemos ser melhores compartilhando as nossas experiências e aprendizados que vamos acumulando ao longo do tempo.
+Curto muito fazer network na área de TI. Sempre acreditei que podemos ser melhores compartilhando as nossas experiências e aprendizados que vamos adquirindo ao longo da vida.
 </p>
 
 ---
