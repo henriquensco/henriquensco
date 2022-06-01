@@ -1,4 +1,4 @@
-<h1 align="center">Falaa pessoal! <img src="https://raw.githubusercontent.com/kaueMarques/kaueMarques/master/hi.gif" width="30px"></h1>
+<h1 align="center">Falaa pessoal! <img src="https://raw.githubusercontent.com/kaueMarques/kaueMarques/master/hi.gif" width="30"></h1>
 
 <p>
 Me chamo Henrique, sou Desenvolvedor Full Stack, atuando com PHP e VueJs. Curso Desenvolvimento de Sistemas pelo Senai.  
