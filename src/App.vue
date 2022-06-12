@@ -1,42 +1,17 @@
 <template>
-  <HeaderComponent />
-  <Home />
-  <Habilidades/>
-  <Experiencias/>
-  <Projetos/>
-  <!-- <Sobre/> -->
-  <FooterComponent />
+    <RouterView />
 </template>
 
-<script>
-import HeaderComponent from "@/components/HeaderComponent.vue";
-import FooterComponent from "@/components/FooterComponent.vue";
-import Home from "@/views/Home.vue";
-import Habilidades from "@/views/Habilidades.vue";
-import Experiencias from "@/views/Experiencias.vue";
-import Projetos from "@/views/Projetos.vue";
-//import Sobre from "@/views/Sobre.vue";
-
-export default {
-  name: "App",
-  components: {
-    HeaderComponent,
-    FooterComponent,
-    Home,
-    Habilidades,
-    Experiencias,
-    Projetos,
-    //Sobre
-  },
-  created() {
-    document.title = "Henrique Nascimento Costa"
-  }
-};
+<script setup>
+import { RouterLink, RouterView } from 'vue-router'
+import HelloWorld from '@/components/HelloWorld.vue'
 </script>
 
 <style>
+@import '@/assets/base.css';
+
 * {
-  outline: 0;
+    outline: 0;
     margin: 0;
     border: 0;
     padding: 0;
@@ -45,30 +20,117 @@ export default {
 
 /* width */
 ::-webkit-scrollbar {
-  width: 10px;
+    width: 10px;
 }
 
 /* Track */
 ::-webkit-scrollbar-track {
-  background: #414141;
+    background: #414141;
 }
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: #888;
-  border-radius: 4px;
+    background: #888;
+    border-radius: 4px;
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-  background: #555;
+    background: #555;
+}
+
+body {
+    background-color: #070707;
 }
 
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #e4e4e4;
+    margin: 0 auto;
+    font-weight: normal;
 }
+
+/* header {
+    line-height: 1.5;
+    max-height: 100vh;
+}
+
+.logo {
+    display: block;
+    margin: 0 auto 2rem;
+}
+
+a,
+.green {
+    text-decoration: none;
+    color: hsla(160, 100%, 37%, 1);
+    transition: 0.4s;
+}
+
+@media (hover: hover) {
+    a:hover {
+        background-color: hsla(160, 100%, 37%, 0.2);
+    }
+}
+
+nav {
+    width: 100%;
+    font-size: 12px;
+    text-align: center;
+    margin-top: 2rem;
+}
+
+nav a.router-link-exact-active {
+    color: var(--color-text);
+}
+
+nav a.router-link-exact-active:hover {
+    background-color: transparent;
+}
+
+nav a {
+    display: inline-block;
+    padding: 0 1rem;
+    border-left: 1px solid var(--color-border);
+}
+
+nav a:first-of-type {
+    border: 0;
+}
+
+@media (min-width: 1024px) {
+    body {
+        display: flex;
+        place-items: center;
+    }
+
+    #app {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        padding: 0 2rem;
+    }
+
+    header {
+        display: flex;
+        place-items: center;
+        padding-right: calc(var(--section-gap) / 2);
+    }
+
+    header .wrapper {
+        display: flex;
+        place-items: flex-start;
+        flex-wrap: wrap;
+    }
+
+    .logo {
+        margin: 0 2rem 0 0;
+    }
+
+    nav {
+        text-align: left;
+        margin-left: -1rem;
+        font-size: 1rem;
+
+        padding: 1rem 0;
+        margin-top: 1rem;
+    }
+} */
 </style>
