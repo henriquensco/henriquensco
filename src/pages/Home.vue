@@ -4,10 +4,7 @@
         <div class="container">
             <div class="flex-container">
                 <div>
-                    Henrique
-                </div>
-                <div>
-                    <!-- ok!2 -->
+                    <span class="text-white">Henrique</span>
                 </div>
             </div>
         </div>
@@ -18,10 +15,13 @@
             <div class="align-center">
                 <div id="about-me">
                     <div>
-                        <h1>Hey, I'm Henrique</h1>
+                        <h1 class="text-white">Hey, I'm Henrique</h1>
                     </div>
                     <div @click="aboutMe()" id="click-about-me">
-                        <span>About Me</span>
+                        <span class="text-white">About Me</span>
+                    </div>
+
+                    <div id="teste" class="text-white">
                     </div>
                 </div>
             </div>
@@ -29,9 +29,9 @@
 
         <section class="content about-section" id="about">
             <div class="container flex-container">
-                <div class="inner-content">
+                <div class="inner-content-170">
                     <div id="title">
-                        <h2>A little bit about me...</h2>
+                        <h2 class="margin-bottom-4">A little bit about me...</h2>
                     </div>
                     <div id="content">
                         <p>
@@ -59,8 +59,46 @@
                         </p>
                     </div>
                 </div>
-                <div class="inner-content">
+                <div class="inner-content-170">
                     <img src="../assets/guy-reading.png" class="responsive-image" width="450px" alt="">
+                </div>
+            </div>
+        </section>
+
+        <section class="content companys">
+            <div class="container flex-container">
+                <div class="inner-content-90">
+                    <div id="title">
+                        <h2 class="text-white margin-bottom-4">Experiences</h2>
+                    </div>
+
+                    <div id="experiences">
+                        <div class="experience-block">
+                            <span id="title">Fullstack Developer</span>
+                            <img src="../assets/dpc.png" alt="" />
+                            <div class="description">
+                                <p>I acted as a Fullstack Developer at DPC Distribuidor Atacadista S/A about nine
+                                    months. </p>
+                                <p>While working at this Company, the most of the demands, I worked with PHP, Laravel
+                                    and VueJs</p>
+                                <p>I helped the team with the Integrations and implement new feature to the Customer
+                                    Service and CallCenter.</p>
+                            </div>
+                        </div>
+
+                        <div class="experience-block">
+                            <span id="title">Fullstack Developer</span>
+                            <img src="https://abcomm.org/wp-content/uploads/2022/03/Infracommerce.png" alt="" />
+                            <div class="description">
+                                <p>Working with PHP as a FullStack Developer implementing new features with the team and
+                                    solving the reported bugs.</p>
+                                <p>In addition to create documentations for the developed features we develope.</p>
+                                <p>The stacks that I use to do a good work, by now, is PHP, Confluence and Swagger for
+                                    the APIs Documentation.</p>
+                            </div>
+                        </div>
+
+                    </div>
                 </div>
             </div>
         </section>
@@ -84,10 +122,9 @@ export default {
 }
 </script>
 
-<style scoped>
+<style scoped lang="css">
 header {
     background-color: #333;
-    color: #fff;
     padding: 23px 5px;
     position: fixed;
     width: 100%;
@@ -121,7 +158,6 @@ header {
 }
 
 #about-me {
-    color: #fff;
     margin-top: calc(40vh - 5%);
     justify-content: center;
     max-width: 700px;
@@ -131,7 +167,7 @@ header {
 }
 
 #about-me div {
-    margin: 25px;
+    margin: 25px 0;
 }
 
 #about-me h1 {
@@ -139,7 +175,7 @@ header {
 }
 
 #click-about-me {
-    border: 1px solid #fff;
+    background-color: #161616;
     padding: 17px;
     border-radius: 2px;
     text-align: center;
@@ -148,24 +184,28 @@ header {
 }
 
 #click-about-me:active {
-    background-color: #161616;
-    border: 2px solid #fff;
+    background-color: #2c2c2c;
 }
 
 .about-section {
     background-color: #ffffff;
 }
 
-.inner-content {
-    margin-top: 170px;
+.inner-content-170 {
+    margin-top: calc(25vh - 5%);
+}
+
+.inner-content-90 {
+    margin-top: 90px;
 }
 
 .responsive-image {
     width: 100%;
 }
 
-#about h2 {
+.margin-bottom-4 {
     border-bottom: 4px solid #636363;
+    max-width: 500px;
 }
 
 #about #content {
@@ -176,5 +216,50 @@ header {
     font-family: Arial, Helvetica, sans-serif;
     font-weight: normal;
     margin: 15px 0;
+}
+
+.companys {
+    background-color: #161616;
+}
+
+@media (max-width:520px) {
+    #about img {
+        display: none;
+    }
+}
+
+.text-white {
+    color: #ffffff;
+}
+
+#experiences {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.experience-block {
+    margin-top: 20px;
+    background-color: #ffffff;
+    border-radius: 3px;
+    padding: 15px;
+    box-shadow: #000000 3px 1px 20px;
+    width: 17rem;
+}
+
+#experiences img {
+    max-width: 200px;
+    padding: 15px 0;
+}
+
+@media (min-width: 427px) {
+    .experience-block {
+        margin-right: 30px;
+    }
+}
+
+.description {
+    font-weight: normal;
+    text-align: justify;
 }
 </style>

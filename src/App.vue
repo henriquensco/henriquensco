@@ -38,6 +38,7 @@ html {
 }
  */
 .container {
+  padding:0 45px 0 45px;
   max-width: 1200px;
   margin: 0 auto;
 }
