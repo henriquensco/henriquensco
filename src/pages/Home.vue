@@ -152,6 +152,12 @@
         </section>
     </main>
 
+    <footer>
+        <div class="container">
+            <a href="https://www.linkedin.com/in/henriquensco/" target="_blank" rel="Henrique Nascimento Costa">Henrique Nascimento Costa</a>
+        </div>
+    </footer>
+
 </template>
 
 <script>
@@ -338,8 +344,20 @@ header {
     padding: 15px;
     text-align: center;
     border-radius: 4px;
-    color: #FFF;
+    color: #ffffff;
     font-weight: bold;
+    text-decoration: none;
+}
+
+footer {
+    background-color: #161616;
+    padding: 15px 15px;
+    text-align: center;
+    color: #ffffff;
+}
+
+footer a {
+    color: #ffffff;
     text-decoration: none;
 }
 </style>
