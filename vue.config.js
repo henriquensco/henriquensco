@@ -1,5 +1,4 @@
-mix.webpackConfig({
-    stats: {
-        children: true,
-    },
-});
+const { defineConfig } = require('@vue/cli-service')
+module.exports = defineConfig({
+  transpileDependencies: true
+})

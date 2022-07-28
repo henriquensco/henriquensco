@@ -26,9 +26,9 @@ Curto muito fazer network na área de TI. Sempre acreditei que podemos ser melho
 
 <p align="center">
 <a href="https://github.com/henriquensco">
-  
+
   <img height="180em" src="https://github-readme-stats-eight-theta.vercel.app/api?username=henriquensco&show_icons=true&theme=algolia&include_all_commits=true&count_private=true"/>
-  
+
   <img height="180em" src="https://github-readme-stats-eight-theta.vercel.app/api/top-langs/?username=henriquensco&layout=compact&langs_count=8&theme=algolia"/>
 
 </a>
