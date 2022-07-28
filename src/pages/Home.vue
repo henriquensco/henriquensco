@@ -111,12 +111,16 @@
                     </div>
 
                     <div id="project">
-                        
+
                         <div class="project-block">
                             <span id="title">Spraytech</span>
                             <div class="description">
-                                <p>Spraytech is a app to help rural producers with a proper inspection for equipaments.</p>
-                                <a href="https://www.hackatagro.com/post/podcast-traz-a-grande-vencedora-do-desafio-beon-claro-spraytech" target="_blank">Spraytech</a>
+                                <p>Spraytech is a app to help rural producers with a proper inspection for equipaments.
+                                </p>
+                            </div>
+                            <div class="access-link">
+                                <a href="https://www.hackatagro.com/post/podcast-traz-a-grande-vencedora-do-desafio-beon-claro-spraytech"
+                                    target="_blank">Go To Spraytech</a>
                             </div>
                         </div>
 
@@ -124,15 +128,21 @@
                             <span id="title">Recibo Fácil</span>
                             <div class="description">
                                 <p>A web application to generate Recibo and Nota Promissoria.</p>
-                                <a href="https://recibofacil.henriquensco.dev" target="_blank">Recibo Fácil</a>
+                            </div>
+                            <div class="access-link">
+                                <a href="https://recibofacil.henriquensco.dev" target="_blank">Go To Recibo Fácil</a>
                             </div>
                         </div>
 
                         <div class="project-block">
                             <span id="title">Api Melhores Rotas</span>
                             <div class="description">
-                                <p>A API delevoped with Python and FastApi. This is a project to discover the best route between cities.</p>
-                                <a href="https://github.com/henriquensco/api-melhores-rotas" target="_blank">Api Melhores Rotas</a>
+                                <p>A API delevoped with Python and FastApi. This is a project to discover the best route
+                                    between cities.</p>
+                            </div>
+                            <div class="access-link">
+                                <a href="https://github.com/henriquensco/api-melhores-rotas" target="_blank">Api
+                                    Go To Melhores Rotas</a>
                             </div>
                         </div>
 
@@ -298,6 +308,9 @@ header {
     padding: 15px;
     box-shadow: rgb(0 0 0 / 23%) 3px 1px 20px;
     width: 17rem;
+    height: 15rem;
+    display: grid;
+    grid-template-rows: 6fr 35fr 5fr;
 }
 
 #experiences img {
@@ -318,5 +331,15 @@ header {
 .description {
     font-weight: normal;
     text-align: justify;
+}
+
+.access-link, .access-link a{
+    background-color: #161616;
+    padding: 15px;
+    text-align: center;
+    border-radius: 4px;
+    color: #FFF;
+    font-weight: bold;
+    text-decoration: none;
 }
 </style>
