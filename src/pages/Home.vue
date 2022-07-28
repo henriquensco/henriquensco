@@ -102,6 +102,44 @@
                 </div>
             </div>
         </section>
+
+        <section class="content projects">
+            <div class="container flex-container">
+                <div class="inner-content-90">
+                    <div id="title">
+                        <h2 class="margin-bottom-4">Projects</h2>
+                    </div>
+
+                    <div id="project">
+                        
+                        <div class="project-block">
+                            <span id="title">Spraytech</span>
+                            <div class="description">
+                                <p>Spraytech is a app to help rural producers with a proper inspection for equipaments.</p>
+                                <a href="https://www.hackatagro.com/post/podcast-traz-a-grande-vencedora-do-desafio-beon-claro-spraytech" target="_blank">Spraytech</a>
+                            </div>
+                        </div>
+
+                        <div class="project-block">
+                            <span id="title">Recibo Fácil</span>
+                            <div class="description">
+                                <p>A web application to generate Recibo and Nota Promissoria.</p>
+                                <a href="https://recibofacil.henriquensco.dev" target="_blank">Recibo Fácil</a>
+                            </div>
+                        </div>
+
+                        <div class="project-block">
+                            <span id="title">Api Melhores Rotas</span>
+                            <div class="description">
+                                <p>A API delevoped with Python and FastApi. This is a project to discover the best route between cities.</p>
+                                <a href="https://github.com/henriquensco/api-melhores-rotas" target="_blank">Api Melhores Rotas</a>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
 
 </template>
@@ -238,12 +276,27 @@ header {
     justify-content: center;
 }
 
+#project {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
 .experience-block {
     margin-top: 20px;
     background-color: #ffffff;
     border-radius: 3px;
     padding: 15px;
     box-shadow: #000000 3px 1px 20px;
+    width: 17rem;
+}
+
+.project-block {
+    margin-top: 20px;
+    background-color: #ffffff;
+    border-radius: 3px;
+    padding: 15px;
+    box-shadow: rgb(0 0 0 / 23%) 3px 1px 20px;
     width: 17rem;
 }
 
@@ -254,6 +307,10 @@ header {
 
 @media (min-width: 427px) {
     .experience-block {
+        margin-right: 30px;
+    }
+
+    .project-block {
         margin-right: 30px;
     }
 }
